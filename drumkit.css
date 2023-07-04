@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  flex-direction: row;
+}
+.wrapper {
+  position: relative;
+}
+
+.map-wrapper {
+  color: white;
+  background-color: black;
+}
+
+.key.map {
+  color: black;
+  display: inline-block;
+}
+
+.drum-set-wrapper {
+  position: absolute;
+}
+
+.drum-set {
+  position: absolute;
+}
+
+.crash-cymbal {
+  left: 42px;
+  top: 78px;
+}
+
+.hihat-top-cymbal {
+  left: 283px;
+  top: 118px;
+}
+
+.main-set {
+  left: 0;
+  top: 0;
+}
+
+.key {
+  width: 2rem;
+  height: 2rem;
+  background-color: gainsboro;
+  border: solid darkgray;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 2rem;
+  position: absolute;
+  z-index: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+.map {
+  position: relative;
+}
+
+.crash {
+  left: 60px;
+  top: 40px;
+}
+.ride {
+  left: 120px;
+  top: 45px;
+}
+.floor-tom {
+  left: 95px;
+  top: 240px;
+}
+.mid-tom {
+  left: 150px;
+  top: 162px;
+}
+.high-tom {
+  left: 243px;
+  top: 175px;
+}
+.kick-left {
+  left: 180px;
+  top: 240px;
+}
+.kick-right {
+  left: 235px;
+  top: 240px;
+}
+.snare {
+  left: 305px;
+  top: 195px;
+}
+.hi-hat-open {
+  left: 295px;
+  top: 90px;
+}
+.hi-hat-closed {
+  left: 360px;
+  top: 90px;
+}

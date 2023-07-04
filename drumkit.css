@@ -1,19 +1,28 @@
-body {
-  display: flex;
-  flex-direction: row;
-}
-.wrapper {
-  position: relative;
-}
-
 .map-wrapper {
   color: white;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 2rem 0rem 0.5rem;
+  margin: 0rem;
+}
+
+body {
+  display: flex;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+.key-wrapper {
+  position: relative;
 }
 
 .key.map {
   color: black;
+  position: relative;
   display: inline-block;
+  margin: 0.5rem 0rem;
 }
 
 .drum-set-wrapper {
@@ -22,6 +31,26 @@ body {
 
 .drum-set {
   position: absolute;
+  left: 300px;
+  top: 300px;
+}
+
+@keyframes cymbal {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes hihat {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(0px, 4px);
+  }
 }
 
 .crash-cymbal {
@@ -56,7 +85,7 @@ ul {
 }
 
 .map {
-  position: relative;
+  position: absolute;
 }
 
 .crash {

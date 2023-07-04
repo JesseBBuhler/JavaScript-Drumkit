@@ -1,5 +1,5 @@
 window.onload = function () {
-  let symbol = new Audio();
+  let cymbal = new Audio();
   let kick = new Audio();
   let hiHat = new Audio();
   let floorTom = new Audio();
@@ -14,11 +14,16 @@ window.onload = function () {
   document.body.onkeydown = function (e) {
     document.getElementById(e.key).style.backgroundColor = "darkgray";
     if (e.key == "e" || e.key == "r") {
-      if (!symbol.ended) {
-        symbol.load();
+      document.getElementById("crash-ride").style.animation =
+        "cymbal .1s linear 2 alternate";
+      setTimeout(() => {
+        document.getElementById("crash-ride").style.animation = "";
+      }, 200);
+      if (!cymbal.ended) {
+        cymbal.load();
       }
-      symbol = document.querySelector(`audio[key="${e.key}"]`);
-      symbol.play();
+      cymbal = document.querySelector(`audio[key="${e.key}"]`);
+      cymbal.play();
     } else if (e.key == "v" || e.key == "b") {
       if (!kick.ended) {
         kick.load();
@@ -26,6 +31,13 @@ window.onload = function () {
       kick = document.querySelector(`audio[key="${e.key}"]`);
       kick.play();
     } else if (e.key == "i" || e.key == "k") {
+      if (e.key == "k") {
+        document.getElementById("hihat-top").style.animation =
+          "hihat .1s linear 2 alternate";
+        setTimeout(() => {
+          document.getElementById("hihat-top").style.animation = "";
+        }, 200);
+      }
       if (!hiHat.ended) {
         hiHat.load();
       }
